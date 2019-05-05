@@ -18,7 +18,9 @@
     "pack:preload": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.preload.config.js",
     "test": "npm run unit && npm run e2e",
     "unit": "karma start test/unit/karma.conf.js",
-    "postinstall": ""
+    "postinstall": "",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "build": {
     "productName": "thor-sync",
@@ -76,7 +78,8 @@
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.1",
     "ws": "^6.0.0",
-    "zen-observable": "^0.8.9"
+    "zen-observable": "^0.8.9",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@mdi/font": "^2.8.94",
@@ -139,5 +142,6 @@
     "webpack-dev-server": "^2.7.1",
     "webpack-hot-middleware": "^2.18.2",
     "webpack-merge": "^4.1.0"
-  }
+  },
+  "snyk": true
 }
